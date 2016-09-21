@@ -1,0 +1,15 @@
+<$PLAN9/src/mkhdr
+
+LIB=libixlconn.a
+
+OFILES=\
+	getixlconn.$O\
+	getixlfd.$O\
+	getixldir.$O\
+	getixlname.$O\
+	getudsdir.$O\
+
+<../mklib
+
+LIBDIR=../../lib
+CFLAGS=-Wall -I../../include
