@@ -1,0 +1,13 @@
+<$PLAN9/src/mkhdr
+
+TARG=sysptest
+
+OFILES=\
+	sysptest.$O\
+	syspcheck.$O\
+
+<$PLAN9/src/mkone
+
+CFLAGS=-Wall -I../../../include
+LDLIBS=-lsysp
+LDFLAGS=-L../../../lib $LDLIBS

@@ -1,0 +1,11 @@
+<$PLAN9/src/mkhdr
+
+LIB=libsysp.a
+
+OFILES=\
+	sysp.$O\
+
+<../mklib
+
+LIBDIR=../../lib
+CFLAGS=-Wall -I../../include
