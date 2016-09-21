@@ -1,0 +1,25 @@
+# This mklib replacement uses p9p mkcommon,
+# but the "install" rule works as expected.
+
+LIBDIR=.
+LIBOBJ=${OFILES: %=$LIB(%)}
+
+default:V:	all
+
+all:V:	$LIB
+
+$LIB:Q:	$LIBOBJ
+	$AR vrsu $LIB $newmember
+
+$LIB(%):N:	%
+
+install:VQ:	$LIB
+	if [ $LIBDIR != . ]; then
+		cp -v $prereq $LIBDIR/$prereq
+	else
+		echo "Set LIBDIR as installation directory after the inclusion of this file."
+	fi
+
+CLEANFILES=$CLEANFILES $LIB
+
+<$PLAN9/src/mkcommon
