@@ -1,0 +1,34 @@
+<$PLAN9/src/mkhdr
+
+LIB=libix.a
+
+OFILES=\
+	syspC2R.$O\
+	open.$O\
+	create.$O\
+	dup.$O\
+	close.$O\
+	remove.$O\
+	read.$O\
+	readn.$O\
+	write.$O\
+	pread.$O\
+	pwrite.$O\
+	seek.$O\
+	stat.$O\
+	fstat.$O\
+	wstat.$O\
+	fwstat.$O\
+	chdir.$O\
+	fd2path.$O\
+	bind.$O\
+	mount.$O\
+	unmount.$O\
+	rfork.$O\
+	newrfork.$O\
+	oldrfork.$O\
+
+<../mklib
+
+LIBDIR=../../lib
+CFLAGS=-Wall -I../../include
