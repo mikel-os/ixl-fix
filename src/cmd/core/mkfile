@@ -1,0 +1,13 @@
+<$PLAN9/src/mkhdr
+
+TARG=\
+	ixlexec\
+	cat\
+
+BIN=../../../bin
+
+<$PLAN9/src/mkmany
+
+CFLAGS=-Wall -I../../../include
+LDLIBS=-lix -lixlconn -lsysp
+LDFLAGS=-L../../../lib $LDLIBS
