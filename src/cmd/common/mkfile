@@ -1,0 +1,12 @@
+<$PLAN9/src/mkhdr
+
+TARG=\
+	nfork\
+
+BIN=../../../bin
+
+<$PLAN9/src/mkmany
+
+CFLAGS=-Wall -I../../../include
+LDLIBS=-lix -lsysp -lixlconn
+LDFLAGS=-L../../../lib $LDLIBS
