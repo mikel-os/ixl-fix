@@ -116,7 +116,6 @@ struct Syscallchdir{
 
 struct Syscallfd2path{
 	int	fd;
-	char	*buf;
 	int	nbuf;
 };
 
