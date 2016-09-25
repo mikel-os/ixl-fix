@@ -313,7 +313,6 @@ checkC(void)
 	print("Fd2path\n");
 	s.i = SYSFD2PATH;
 	s.fd2path.fd = 100;
-	s.fd2path.buf = nil;	/* ignored field */
 	s.fd2path.nbuf = 40;
 	n = syspsizeC2M(&s);
 	print("	Size\t%d\n", n);

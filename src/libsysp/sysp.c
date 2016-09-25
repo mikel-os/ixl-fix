@@ -798,7 +798,7 @@ syspsizeR2M(Sysreply r[])
 		ADD_U32(n, v, BIT16SZ)
 		break;
 	case SYSFD2PATH:
-		ADD_U32(n, v, strbufsiz(r->fd2path.buf))	/* OLD: includes nbuf */
+		ADD_U32(n, v, strbufsiz(r->fd2path.buf))
 		break;
 /*	reserved
 	case SYSFVERSION:
