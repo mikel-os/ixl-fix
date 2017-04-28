@@ -1,0 +1,16 @@
+<$PLAN9/src/mkhdr
+
+TARG=ixl
+
+OFILES=\
+	ixl.$O\
+	conn.$O\
+	queue.$O\
+
+BIN=../../bin
+
+<$PLAN9/src/mkone
+
+CFLAGS=-Wall -I../../include
+LDLIBS=-lixlconn -lsysp
+LDFLAGS=-L../../lib $LDLIBS
